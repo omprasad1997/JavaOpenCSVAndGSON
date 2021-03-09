@@ -19,24 +19,21 @@ public class CSVUser {
         return name;
     }
 
-    public void setName(String name) {
+    public CSVUser(String name, String email, String phoneNo, String country) {
         this.name = name;
+        this.email = email;
+        this.phoneNo = phoneNo;
+        this.country = country;
     }
+
+    public CSVUser() { }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPhoneNo() {
         return phoneNo;
-    }
-
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
     }
 
     public String getCountry() {

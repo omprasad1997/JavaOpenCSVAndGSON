@@ -7,6 +7,7 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.List;
 
 public class OpenCSVReaderAndParseToBean {
     private static final String SAMPLE_CSV_FILE_PATH = "./users-with-header.csv";
@@ -20,10 +21,9 @@ public class OpenCSVReaderAndParseToBean {
                                 .withIgnoreLeadingWhiteSpace(true)
                                 .build();
 
-            Iterator<CSVUser> csvUserIterator = csvToBean.iterator();
+            List<CSVUser> csvUsers = csvToBean.parse();
 
-            while(csvUserIterator.hasNext()){
-                CSVUser csvUser = csvUserIterator.next();
+            for(CSVUser csvUser: csvUsers){
                 System.out.println("Name : " + csvUser.getName());
                 System.out.println("Email : " + csvUser.getEmail());
                 System.out.println("Phone : " + csvUser.getPhoneNo());
