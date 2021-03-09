@@ -1,4 +1,3 @@
-package com.dummyproject;
 
 import com.opencsv.bean.CsvBindByName;
 
@@ -38,10 +37,6 @@ public class CSVUser {
 
     public String getCountry() {
         return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     @Override

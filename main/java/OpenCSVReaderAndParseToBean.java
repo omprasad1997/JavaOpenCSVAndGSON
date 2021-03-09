@@ -1,4 +1,3 @@
-import com.dummyproject.CSVUser;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
